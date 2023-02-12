@@ -1,12 +1,20 @@
 document.getElementById("btn-withdraw").addEventListener("click", function () {
     const withdrawField = document.getElementById("withdraw-amount");
     const withdrawValue = parseFloat(withdrawField.value);
+    withdrawField.value = "";
+    if (isNaN(withdrawValue)) {
+        alert("please provide a number!");
+        return;
+    }
+
+    if (withdrawValue > parseFloat(document.getElementById("balance").innerText)) {
+        alert("baaper bank er eto tk nai!");
+        return;
+    }
 
     const withdraw = document.getElementById("withdraw");
-    withdraw.innerHTML = parseFloat(withdraw.innerHTML) + withdrawValue;
+    withdraw.innerText = parseFloat(withdraw.innerText) + withdrawValue;
 
     const balance = document.getElementById("balance");
-    balance.innerHTML = parseFloat(balance.innerHTML) - withdrawValue;
-
-    withdrawField.value = "";
+    balance.innerText = parseFloat(balance.innerText) - withdrawValue;
 });
