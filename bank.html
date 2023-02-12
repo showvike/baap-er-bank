@@ -31,7 +31,7 @@
         <!-- withdraw info starts -->
         <div class="bg-yellow-400 p-8 rounded-lg">
           <h2 class="text-2xl">Withdraw</h2>
-          <p id="amount" class="text-5xl">$00</p>
+          <p class="text-5xl">$<span id="withdraw">00</span></p>
         </div>
         <!-- withdraw info ends -->
         <!-- balance info starts -->
@@ -77,7 +77,7 @@
             />
             <button
               class="bg-orange-400 text-white font-semibold px-8 py-2 rounded-lg hover:bg-violet-600 text-xl"
-              id="btn-deposit"
+              id="btn-withdraw"
             >
               Withdraw
             </button>
@@ -90,5 +90,6 @@
     <!-- main ends -->
     <!-- custom js -->
     <script src="./js/deposit.js"></script>
+    <script src="./js/withdraw.js"></script>
   </body>
 </html>
